@@ -5,19 +5,11 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["mise"],
+      "description": "Group and Automerge pnpm minor and patch updates",
       "matchPackageNames": ["pnpm"],
-      "groupName": "pnpm",
-      "minimumReleaseAge": "2 days"
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["packageManager"],
-      "groupName": "pnpm",
-      "minimumReleaseAge": "2 days"
+      "minimumReleaseAge": "2 days",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "pnpm"
     }
-  ],
-  "mise": {
-    "enabled": true
-  }
+  ]
 }
