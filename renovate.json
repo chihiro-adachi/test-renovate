@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>cybozu/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["mise"],
+      "matchPackageNames": ["pnpm"],
+      "groupName": "pnpm",
+      "minimumReleaseAge": "2 days"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["packageManager"],
+      "groupName": "pnpm",
+      "minimumReleaseAge": "2 days"
+    }
+  ],
+  "mise": {
+    "enabled": true
+  }
+}
